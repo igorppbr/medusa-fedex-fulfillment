@@ -119,7 +119,7 @@ To install the FedEx Fulfillment Integration, follow these steps:
 > From there, you can enter your **Client ID**, **Client Secret**, and **Account Number** securely via the UI.
 
 <p align="center">
-  <img alt="FedEx Admin Settings" src="https://raw.githubusercontent.com/Imagination-Media/medusa-fedex-fulfillment/master/images/3.png" width="600"/>
+  <img alt="FedEx Admin Settings" src="https://raw.githubusercontent.com/igorppbr/medusa-fedex-fulfillment/master/images/3.png" width="600"/>
 </p>
 
 > **How credentials are used:**  
@@ -158,7 +158,7 @@ Decide which FedEx shipping services you want to offer to your customers.
 <br/>
 
 <p align="center">
-  <img alt="FedEx Shipping Option" src="https://raw.githubusercontent.com/Imagination-Media/medusa-fedex-fulfillment/master/images/1.png" width="600"/>
+  <img alt="FedEx Shipping Option" src="https://raw.githubusercontent.com/igorppbr/medusa-fedex-fulfillment/master/images/1.png" width="600"/>
 </p>
 
 <br/>
@@ -176,7 +176,7 @@ When you create a shipment for an order in Medusa, the integration will **automa
 <br/>
 
 <p align="center">
-  <img alt="FedEx Shipping Label" src="https://raw.githubusercontent.com/Imagination-Media/medusa-fedex-fulfillment/master/images/2.png" width="600"/>
+  <img alt="FedEx Shipping Label" src="https://raw.githubusercontent.com/igorppbr/medusa-fedex-fulfillment/master/images/2.png" width="600"/>
 </p>
 
 <br/>
