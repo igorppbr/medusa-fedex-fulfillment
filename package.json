@@ -1,6 +1,6 @@
 {
   "name": "@igorppbr/medusa-v2-fedex-fulfillment",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "FedEx integration for Medusa V2",
   "author": "Igor Ludgero Miura <igorlmiura@gmail.com>",
   "license": "MIT",

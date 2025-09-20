@@ -89,7 +89,7 @@ To install the FedEx Fulfillment Integration, follow these steps:
      options: {
       providers: [
         {
-         resolve: "@igorppbr/medusa-v2-fedex-fulfillment",
+         resolve: "@igorppbr/medusa-v2-fedex-fulfillment/providers/fedex",
          id: "fedex",
          options: {
           isEnabled: true, // Enable or disable integration
