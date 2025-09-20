@@ -17,12 +17,12 @@ import {
   fedexMapping,
   FedexRateRequestItem,
   FedexShippingRate,
-} from "./fedex-api/types"
-import { getAuthToken } from "./fedex-api/auth"
-import { getShippingRates } from "./fedex-api/get-shipping-rates"
-import createFedexShipmentWorkflow from "./workflows/create-shipment"
-import getFedexCredentials from "./workflows/get-credentials"
-import { SetupCredentialsInput } from "./api/admin/fedex/route"
+} from "../../fedex-api/types"
+import { getAuthToken } from "../../fedex-api/auth"
+import { getShippingRates } from "../../fedex-api/get-shipping-rates"
+import createFedexShipmentWorkflow from "../../workflows/create-shipment"
+import getFedexCredentials from "../../workflows/get-credentials"
+import { SetupCredentialsInput } from "../../api/admin/fedex/route"
 
 type InjectedDependencies = {
   logger: Logger
