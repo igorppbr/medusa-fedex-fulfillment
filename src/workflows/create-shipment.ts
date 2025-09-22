@@ -170,8 +170,9 @@ const createFedexShipment = createStep(
       console.log(`Order Items : ${JSON.stringify(orderItems, null, 2)}`);
     }
 
-    const recipient =
-      (input.order as any)?.shipping_address ||
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const recipient = (input.order as any)?.shipping_address ||
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (input.data as any)["to_address"] ||
       {};
 

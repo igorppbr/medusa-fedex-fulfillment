@@ -5,6 +5,17 @@ import {
   AdminOrder,
 } from "@medusajs/framework/types"
 
+type FulfillmentLabelType = {
+  label_url?: string
+  tracking_number?: string
+  tracking_url?: string
+}
+
+type FulfillmentType = {
+    labels?: FulfillmentLabelType[]
+    tracking_url?: string
+}[];
+
 // The widget
 const FedexWidget = ({ 
   data,
@@ -15,10 +26,10 @@ const FedexWidget = ({
   }
 
   // Gather all tracking info with a label_url
-  const trackingInfo = data.fulfillments.flatMap((fulfillment: any) =>
+  const trackingInfo = data.fulfillments.flatMap((fulfillment: FulfillmentType) =>
     (fulfillment.labels || [])
-      .filter((label: any) => label.label_url)
-      .map((label: any) => ({
+      .filter((label: FulfillmentLabelType) => label.label_url)
+      .map((label: FulfillmentLabelType) => ({
         trackingNumber: label.tracking_number,
         trackingUrl: label.tracking_url,
         labelUrl: label.label_url,

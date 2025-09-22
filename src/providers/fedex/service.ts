@@ -9,8 +9,7 @@ import {
   FulfillmentOption,
   FulfillmentOrderDTO,
   Logger,
-  ProductVariantDTO,
-  ValidateFulfillmentDataContext,
+  ProductVariantDTO
 } from "@medusajs/framework/types"
 import {
   FedexAddress,
@@ -238,15 +237,9 @@ class FedexProviderService extends AbstractFulfillmentProviderService {
 
   /**
    * Validate the fulfillment data for a given shipping option.
-   * @param optionData - The shipping option data.
-   * @param data - The fulfillment data.
-   * @param context - The validation context.
    * @returns A promise that resolves to a boolean indicating whether the fulfillment data is valid.
    */
   async validateFulfillmentData(
-    optionData: Record<string, unknown>,
-    data: Record<string, unknown>,
-    context: ValidateFulfillmentDataContext
   ): Promise<boolean> {
     // Nothing to review and approve for now
     return Promise.resolve(true)
@@ -303,7 +296,7 @@ class FedexProviderService extends AbstractFulfillmentProviderService {
       });
 
       return result.shipment;
-    } catch (error: any) {
+    } catch (error) {
       this.logger_.error(`FedEx create fulfillment failed: ${error.message}`)
       throw new Error(`FedEx create fulfillment failed: ${error.message}`)
     }

@@ -1,6 +1,14 @@
 import { FedexAddress, FedexRateRequestItem, FedexShippingRate } from "./types";
 import { Logger } from "@medusajs/framework/types";
 
+// Define RateReplyDetail type if not already imported
+type RateReplyDetail = {
+  serviceType: string;
+  serviceName: string;
+  ratedShipmentDetails: { totalNetCharge: number }[];
+  commit?: { transitDays?: { description?: string } };
+};
+
 /**
  * Get the FedEx shipping rates.
  * @param baseUrl - The base URL for the FedEx API.
@@ -83,7 +91,7 @@ export const getShippingRates = async (
     }
 
     return Array.isArray(result.output?.rateReplyDetails)
-    ? result.output.rateReplyDetails.map((r: any) => {
+    ? result.output.rateReplyDetails.map((r: RateReplyDetail) => {
         const rawTransit = r.commit?.transitDays?.description ?? "";
 
         return {

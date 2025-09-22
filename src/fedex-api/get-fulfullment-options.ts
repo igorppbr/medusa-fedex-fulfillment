@@ -103,8 +103,13 @@ export const getFulfillmentOptions = async (
 
     // 3. Map each serviceType into your FulfillmentOption shape
     // Remove duplicates by serviceType
-    const unique = new Map<string, any>()
-    for (const d of details) {
+    interface RateReplyDetail {
+        serviceType: string
+        serviceName: string
+    }
+
+    const unique = new Map<string, RateReplyDetail>()
+    for (const d of details as RateReplyDetail[]) {
         if (!unique.has(d.serviceType)) {
             unique.set(d.serviceType, d)
         }

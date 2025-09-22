@@ -25,7 +25,7 @@ const FedexSettingsPageInner = () => {
 
   // Merge fetched data with initial state
   const [form, setForm] = useState(initialState)
-  const [touched, setTouched] = useState<{ [k: string]: boolean }>({})
+  const [setTouched] = useState<Record<string, boolean>>({})
   const [alert, setAlert] = useState<{ type: "success" | "error"; message: string } | null>(null)
 
   useEffect(() => {
