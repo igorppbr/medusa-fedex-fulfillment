@@ -11,7 +11,10 @@ export class Migration202509151059 extends Migration {
                 "account_number" text not null,
                 "is_sandbox" boolean not null,
                 "enable_logs" boolean not null,
-                "weight_unit_of_measure" text check ("weight_unit_of_measure" in ('LB', 'KG')) not null
+                "weight_unit_of_measure" text check ("weight_unit_of_measure" in ('LB', 'KG')) not null,
+                "created_at" timestamptz not null default now(),
+                "updated_at" timestamptz not null default now(),
+                "deleted_at" timestamptz
             );
         `);
     }
